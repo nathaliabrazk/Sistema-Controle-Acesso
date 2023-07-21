@@ -1,0 +1,144 @@
+:root{
+    /*variáveis contendo as cores*/
+    --color-white: #fff;
+    --color-green: #bbcf8c;
+    --color-darkbrown: #42140e;
+    --color-midbrown: #572b23;
+    --color-lightbrown: #a76e67;
+    --color-yellow:#d8c25e;
+}*
+
+
+/*Fundo página*/
+body {
+
+    padding: 0;
+
+    margin: 0;
+
+    background-color: var(--color-green);
+
+}
+/*Login*/
+#login {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100vh;
+
+    font-family:'Times New Roman', Times, serif;
+
+}
+/*Fundo login*/
+.card {
+
+    background-color: var(--color-lightbrown);
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    width:280px;
+
+}
+/*Nome "Login"*/
+.card-header {
+
+    padding-bottom: 50px;
+
+    opacity: 10;
+
+    color: var(--color-white);
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+/*Linha abaixo do "Login"*/
+.card-header::after {
+
+    content: "";
+
+    width: 280px;
+
+    height: 2px;
+
+    background-color: #ffffff;
+
+    display: block;
+
+    margin-top: -17px;
+
+    margin-left: -5px;
+
+}
+/*cor de "Usuário" e "senha"*/
+.card-content label {
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    opacity: 0.8;
+
+}
+
+.card-content-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: #f0e8e8;
+
+    padding:10px 0;
+
+}
+
+.card-content-area input {
+
+    margin-top: 10px;
+
+    padding:0 5px;
+
+    background-color: transparent;
+
+    border:none;
+    /*Linhas abaixo de "usuário" e "senha"*/
+    border-bottom: 1px solid #ffffff;
+
+    outline: none;
+
+    color: #ffffff;
+
+}
+
+.card-footer {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+/*Cor do "Entar"*/
+.card-footer .submit{
+    /*Tamanho do botão de "Entrar"*/
+    width: 100%;
+   
+    height: 50px;
+    /*Cor do fundo de "Entrar"*/
+    background-color: #471919;
+
+    border:none;
+    /*Cor da fonte de "Entrar"*/
+    color:#ffffff;
+
+    margin: 10px 0;
+
+}
+
