@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="styleCadastro.css">
+    <title>Cadastro novo usuário</title>
 </head>
 <body>
     <div class="content">
         <h1>Cadastro de novo usuário</h1>
         <form id="form">
             <div>
-                <input type="text" placeholder="Digite seu nome completo" class="inputs required" oninput="nameValidate()">
+                <input type="text" placeholder="Digite seu nome" class="inputs required" oninput="nameValidate()">
                 <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
             </div>
             <div>
@@ -21,23 +21,21 @@
             </div>
             <div>
                 <input type="password" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()">
-                <span class="span-required">Digite uma senha com no mínimo 5 caracteres</span>
+                <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
             </div>
             <div>
                 <input type="password" placeholder="Repita a sua senha" class="inputs required" oninput="comparePassword()">
                 <span class="span-required">Senhas devem ser compatíveis</span>
             </div>
-            
-            <button type="submit">Cadastrar</button>
+    
+            <button type="submit">Enviar</button>
         </form>
     </div>
 </body>
-<!--validação-->
 <script>
-    const form  = document.getElementById('form');
+    const form   = document.getElementById('form');
     const campos = document.querySelectorAll('.required');
     const spans  = document.querySelectorAll('.span-required');
-    //validação email
     const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 
     form.addEventListener('submit', (event) => {
@@ -57,7 +55,7 @@
         campos[index].style.border = '';
         spans[index].style.display = 'none';
     }
-    //validação nome
+
     function nameValidate(){
         if(campos[0].value.length < 3)
         {
@@ -81,7 +79,7 @@
     }
 
     function mainPasswordValidate(){
-        if(campos[2].value.length < 5)
+        if(campos[2].value.length < 8)
         {
             setError(2);
         }
@@ -93,7 +91,7 @@
     }
 
     function comparePassword(){
-        if(campos[2].value == campos[3].value && campos[3].value.length >= 5)
+        if(campos[2].value == campos[3].value && campos[3].value.length >= 8)
         {
             removeError(3);
         }
