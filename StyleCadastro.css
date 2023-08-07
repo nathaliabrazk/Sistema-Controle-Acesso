@@ -91,9 +91,3 @@ button[type="submit"]:hover{
     background-color: var(--color-midbrown);
 }
 
-@media screen and (max-width: 576px) {
-    .box-select{
-        flex-direction: column;
-        gap: 5px;
-    }
-}
